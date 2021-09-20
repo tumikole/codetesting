@@ -1,3 +1,4 @@
+const { CLIENT_RENEG_LIMIT } = require("node:tls");
 
 // THe equality Operator
 function testEqual(val) {
@@ -349,7 +350,6 @@ switchOfStuff(1);
 answer:
 function switchOfStuff(val) {
   var answer = "";
-  // Only change code below this line
   switch (val) {
     case ("a"): 
     return "apple";
@@ -369,10 +369,192 @@ function switchOfStuff(val) {
     default:
       answer = "stuff"
       
-        // Only change code above this line
         return answer;
       }
       
       
       
     }
+
+
+    //Return Early Pattern for Functions
+function abTest(a, b) {
+  // Only change code below this line
+
+
+  // Only change code above this line
+
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+console.log(abTest(0,0));
+
+answer:
+function abTest(a, b) {
+  if (a < 0 || b < 0) {
+    return undefined;
+  }
+
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+console.log(abTest(0,0));
+
+
+
+//Counting Cards
+
+var count = 0;
+
+function cc(card) {
+  // Only change code below this line
+
+
+  return "Change Me";
+  // Only change code above this line
+}
+
+cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+answer:
+let count = 0;
+
+function cc(card) {
+  switch (card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+      break;
+    case 10:
+    case "J":
+    case "Q":
+    case "K":
+    case "A":
+      count--;
+      break;
+  }
+  if (count > 0) {
+    return count + " Bet";
+  } else {
+    return count + " Hold";
+  }
+}
+cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+
+//Build JavaScript Objects
+var myDog = {
+  // Only change code below this line
+  
+  // Only change code above this line
+  };
+
+  answer:
+  var myDog = {
+    name: "Bobby",
+    legs: 4,
+    tails: 1,
+    friends: ["dogs", "people"]
+    };
+
+
+
+
+    //Accessing Object Properties with Dot Notation
+    // Setup
+var testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+
+// Only change code below this line
+
+var hatValue = testObj;      // Change this line
+var shirtValue = testObj;    // Change this line
+
+answer:
+var testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+var hatValue = testObj.hat;      
+var shirtValue = testObj.shirt;   
+
+
+//Accessing Object Properties with Bracket Notation
+// Setup
+var testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+
+// Only change code below this line
+
+var entreeValue = testObj;   // Change this line
+var drinkValue = testObj;    // Change this line
+
+answer:
+var testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+var entreeValue = testObj["an entree"];   
+var drinkValue = testObj["the drink"];    
+
+
+
+//Accessing Object Properties with Variables
+// Setup
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+// Only change code below this line
+
+var playerNumber;       // Change this line
+var player = testObj;   // Change this line
+
+answer:
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+var playerNumber = 16;     
+var player = testObj[playerNumber]; 
+
+
+//Updating Object Properties
+// Setup
+var myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+// Only change code below this line
+
+answer:
+// Setup
+var myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+myDog["name"] = "Happy Coder";
+// or
+// myDog.name = "Happy Coder";
+
+// console.log(myDog)
