@@ -34,4 +34,15 @@ console.log(value)
 
 // const total = numbers.reduce(reducer, value);
 
+<<<<<<< HEAD
 // console.log(total);
+=======
+// console.log(total);
+
+var sum=1;
+for (var i=0; i<array.length; i++) {
+    sum = sum * array[i];
+} 
+return sum;
+}
+>>>>>>> 773872daf6177f52a7bf874c7194c6b4ddd90450
